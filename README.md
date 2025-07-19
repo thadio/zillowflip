@@ -46,8 +46,14 @@ cd zillowflip-ai
 # Instale as dependências
 npm install
 
-# Crie um .env com sua chave da OpenAI e dados do Zillow
+# Copie o arquivo de exemplo e defina suas chaves
 cp .env.example .env
+# Edite `.env` e preencha `ZILLOW_BRIDGE_TOKEN`, `MONGODB_URI` e `OPENAI_KEY`
 
 # Rode o servidor
 npm run dev
+
+## 📡 Endpoints
+
+- `GET /api/properties` lista propriedades filtrando por `city`, `state`, `minPrice` e `maxPrice`.
+- `GET /api/properties/:zpid` detalhes completos de uma propriedade.
